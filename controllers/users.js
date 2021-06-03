@@ -1,9 +1,9 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const BadRequestError = require('../../react-mesto-api-full/backend/errors/400-bad-request-error');
-const UnauthorizedError = require('../../react-mesto-api-full/backend/errors/401-unauthorized-error');
-const NotFoundError = require('../../react-mesto-api-full/backend/errors/404-not-found-error');
-const ConflictError = require('../../react-mesto-api-full/backend/errors/409-conflict-error');
+const BadRequestError = require('../errors/400-bad-request-error');
+const UnauthorizedError = require('../errors/401-unauthorized-error');
+const NotFoundError = require('../errors/404-not-found-error');
+const ConflictError = require('../errors/409-conflict-error');
 const User = require('../models/user');
 
 const { NODE_ENV, JWT_SECRET } = process.env;

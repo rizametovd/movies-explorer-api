@@ -1,6 +1,6 @@
-const BadRequestError = require('../../react-mesto-api-full/backend/errors/400-bad-request-error');
-const UnauthorizedError = require('../../react-mesto-api-full/backend/errors/401-unauthorized-error');
-const NotFoundError = require('../../react-mesto-api-full/backend/errors/404-not-found-error');
+const BadRequestError = require('../errors/400-bad-request-error');
+const UnauthorizedError = require('../errors/401-unauthorized-error');
+const NotFoundError = require('../errors/404-not-found-error');
 const Movie = require('../models/movie');
 
 exports.getAllMovies = (req, res, next) => {

@@ -14,11 +14,11 @@
     "url": "git+https://github.com/rizametovd/movies-explorer-api.git"
   },
   "author": "David Rizametov",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/rizametovd/movies-explorer-api/issues"
   },
-  "homepage": "https://github.com/rizametovd/movies-explorer-api#readme",
+  "homepage": ".",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "celebrate": "^14.0.0",
