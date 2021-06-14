@@ -1,16 +1,23 @@
 require('dotenv').config();
 const express = require('express');
+const helmet = require('helmet');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const { errors } = require('celebrate');
-const { createUser, onLogin } = require('./controllers/users');
 const { errorHandler } = require('./middlewares/errorHandler');
 const { routes } = require('./routes');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-const { validateSignUp, validateSignIn } = require('./middlewares/validation');
+const { rateLimiter } = require('./middlewares/rateLimiter');
 
 const { PORT = 3000 } = process.env;
 const app = express();
+app.use(helmet());
+
+app.use(cors({
+  origin: 'https://movie-explorer.nomoredomains.icu',
+  credentials: true,
+}));
 
 app.use(express.json());
 
@@ -21,11 +28,9 @@ mongoose.connect('mongodb://localhost:27017/bitfilmsdb', {
 });
 
 app.use(requestLogger);
+app.use(rateLimiter);
 
 app.use(cookieParser());
-
-app.post('/signup', validateSignUp, createUser);
-app.post('/signin', validateSignIn, onLogin);
 
 app.use(routes);
 

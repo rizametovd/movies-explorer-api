@@ -21,7 +21,7 @@ exports.createUser = (req, res, next) => {
   bcrypt
     .hash(password, SALT_ROUNDS)
     .then((hash) => User.create({ email, name, password: hash }))
-    .then((createUser) => res.status(200).send({
+    .then((createUser) => res.send({
       _id: createUser._id,
       name: createUser.name,
       email: createUser.email,
