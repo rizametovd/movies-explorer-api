@@ -7,13 +7,7 @@ exports.getAllMovies = (req, res, next) => {
   const userId = req.user._id;
 
   Movie.find({ owner: userId })
-    .then((movies) => {
-      if (movies.length > 0) {
-        res.send(movies);
-      } else {
-        throw new NotFoundError('Сохраненных фильмов нет');
-      }
-    })
+    .then((movies) => res.send(movies))
     .catch(next);
 };
 

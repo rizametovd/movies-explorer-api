@@ -54,18 +54,10 @@ const movieSchema = new mongoose.Schema({
   nameRU: {
     type: String,
     required: [true, 'Поле "nameRU" должно быть заполнено'],
-    validate: {
-      validator: (nameRU) => /[\dа-я\sё]+$/gi.test(nameRU),
-      message: 'Название фильма должно быть на русском',
-    },
   },
   nameEN: {
     type: String,
     required: [true, 'Поле "nameEN" должно быть заполнено'],
-    validate: {
-      validator: (nameRU) => /\w+$/i.test(nameRU),
-      message: 'Название фильма должно быть на английском',
-    },
   },
 });
 
