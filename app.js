@@ -16,7 +16,7 @@ app.use(helmet());
 
 app.use(cors({
   // origin: 'http://localhost:3000',
-  origin: 'https://movie-explorer.nomoredomains.icu',
+  origin: 'https://movies-explorer.rizametov.com/',
   credentials: true,
 }));
 
