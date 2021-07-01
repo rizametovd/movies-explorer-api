@@ -4,12 +4,12 @@
 ![JavaScript](https://img.shields.io/badge/-JavaScript-f3de35?logo=javaScript&logoColor=black)
 
 ## Описание
-Бэкенд часть SPA приложения Movie Explorer на Express.js. Схемы и модели созданы через Mongoose. Все роуты, кроме `/signup` и `/signin`, защищены. Используется валидация Joi и celebrate. При регистрации пользователя пароль хешируется модулем bcrypt с добавлением соли. Реализована централизованная обработка ошибок. Настроено логирование запросов и ошибок.
+Бэкенд часть SPA приложения Movies Explorer на Express.js. Схемы и модели созданы через Mongoose. Все роуты, кроме `/signup` и `/signin`, защищены. Используется валидация Joi и celebrate. При регистрации пользователя пароль хешируется модулем bcrypt с добавлением соли. Реализована централизованная обработка ошибок. Настроено логирование запросов и ошибок.
 
-[Ссылка на код фронтенд части приложения Movie Explorer](https://github.com/rizametovd/movies-explorer-frontend)
+[Ссылка на код фронтенд части приложения Movies Explorer](https://github.com/rizametovd/movies-explorer-frontend)
 
 ## Задача
-* Написать бэкенд для проекта Movie Explorer
+* Написать бэкенд для проекта Movies Explorer
 
 ## Роуты
 Для пользователей:</br>
@@ -111,7 +111,7 @@ npm run start — запускает сервер
 npm run dev — запускает сервер с hot-reload
 ```
 
-Если все прошло успешно, проект будет запущен на `http://localhost:3005`
+Если все прошло успешно, проект будет запущен на `http://localhost:3000`
 
 ### Дополнительно
 
